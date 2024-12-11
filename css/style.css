@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0f6d4f+4,0d614b+22,0d614b+22,0d614b+36,062b20+98 */
+    background: linear-gradient(to bottom, rgba(15, 109, 79, 1) 10%, rgba(13, 97, 75, 1) 16%, rgba(13, 97, 75, 1) 22%, rgb(6, 66, 50) 36%, rgba(6, 43, 32, 1) 98%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgb(0 10 7 / 20%);;
+    padding: 20px 60px;
+    border-radius: 20px
+}
+
+h2 {
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.reset {
+    padding: 15px 20px;
+    color: #267c65;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.reset:focus {
+    color: #267c65;
+    background: #fff;
+    box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+    transition: 0.5s;
+}
+
+.game {
+    width: 440px;
+    /* height: 440px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #fff;
+    transition: 0.25s ease;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* opacity: 0.85; */
+    background-color: #209d7b;
+    transition: 0.25s;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.boxOpen:after {
+    transform: rotateY(180deg);
+}
+
+.boxMatch:after {
+    transform: rotateY(0deg);
+}
+
+.timer, .score {
+    font-size: 2em;
+    color: #fff;
+    background-color: #09513e;
+    padding: 3px 8px;
+}
+
+.d-none {
+    display: none;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <audio id="sound" src="./sounds/right.mp3"></audio>
+        <audio id="win" src="./sounds/win.mp3"></audio>
+        <h2>Memory Game</h2>
+        <div class="timer d-none">Time left <span id="timer"></span></div>
+        <div class="game"></div>
+        <div class="score d-none">Score: <span id="score">0</span> / 16</div>
+        <button id="reset" class="reset d-none" onclick="window.location.reload()">Restart Game</button>
+        <button id="start" class="reset" onclick="startGame()">Start Game</button>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
