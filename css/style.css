@@ -112,3 +112,17 @@ h2 {
 .d-none {
     display: none;
 }
+
+@media screen and (max-width: 560px) {
+    .game {
+        width: 340px
+    }
+    .item {
+        width:70px;
+        height: 70px;
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+}
