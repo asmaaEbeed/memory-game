@@ -50,7 +50,10 @@ function addGameCard(emojis) {
     const box = document.createElement("div");
     box.className = "item";
     box.innerHTML = shuf_emojis[i];
-
+    box.classList.add("boxOpen")
+    setTimeout(function () {
+      box.classList.remove("boxOpen")
+    }, 1500)
     box.addEventListener("click", checkCards);
 
     function checkCards() {
